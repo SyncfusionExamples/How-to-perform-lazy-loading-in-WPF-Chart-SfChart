@@ -13,14 +13,12 @@ namespace SimpleSample
     /// </summary>
     public partial class MainWindow : Window
     {
-        int startValue = 10;
-        
+        int startValue = 10;       
         SfBusyIndicator busyIndicator;
 
         public MainWindow()
         {
             InitializeComponent();
-
             //Adding busy indicator control
             busyIndicator = new SfBusyIndicator();
             busyIndicator.HorizontalAlignment = HorizontalAlignment.Right;                  
@@ -48,9 +46,7 @@ namespace SimpleSample
                     startValue++;                 
                 }
                 xAxis.ZoomPosition = 1;
-            }
-            
+            }            
         }
     }
-
 }
