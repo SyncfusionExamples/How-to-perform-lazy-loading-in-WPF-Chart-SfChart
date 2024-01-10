@@ -8,9 +8,7 @@ Initialize the SfChart with Primary and Secondary axis.
 ## Step 2: 
 Hook the PanChanged event in SfChart and set the required ZoomFactor on the primary axis.
 
-{% tabs %}
-
-{% highlight xaml %}
+XAML
 
     <syncfusion:SfChart PanChanged="chart_PanChanged">
     <syncfusion:SfChart .PrimaryAxis>
@@ -24,9 +22,9 @@ Hook the PanChanged event in SfChart and set the required ZoomFactor on the prim
     .... Add your series here ....
     </syncfusion:SfChart>
 
-{% endhighlight %}
 
-{% highlight c# %}
+ C#
+
 
     SfChart chart = new SfChart();
     chart.PanChanged += chart_PanChanged;
@@ -37,39 +35,29 @@ Hook the PanChanged event in SfChart and set the required ZoomFactor on the prim
     chart.SecondaryAxis = yAxis;
     this.Content = chart;
 
-{% endhighlight %}
 
-{% endtabs %}
+
+
 
 ## Step 3 : 
 Initialize the ChartZoomPanBehavior and enable panning by setting EnablePanning to “True”.
 
-{% tabs %}
-
-{% highlight xaml %}
+ ### XAML
 
     <syncfusion:SfChart.Behaviors>
     <syncfusion:ChartZoomPanBehavior EnablePanning="True"/>
     </syncfusion:SfChart.Behaviors>
 
-{% endhighlight %}
-
-{% highlight c# %}
+  ### C#
 
     ChartZoomPanBehavior zoomPanBehavior = new ChartZoomPanBehavior();
     zoomPanBehavior.EnablePanning = true;
-
-chart.Behaviors.Add(zoomPanBehavior);
-{% endhighlight %}
-
-{% endtabs %}
+    chart.Behaviors.Add(zoomPanBehavior);
 
 ## Step 4: 
 Implement the chart_PanChanged method to calculate the end range of the chart. As horizontal scrolling or panning reaches the end of the chart, additional data points are added, then adjust the position of the xAxis range using ZoomPosition.
 
-{% tabs %}
-
-{% highlight c# %}
+ ### C#
 
     **// startValue = You can set the last value of the data source in viewModel.**
     private void chart_PanChanged(object sender, PanChangedEventArgs e)
@@ -88,12 +76,11 @@ Implement the chart_PanChanged method to calculate the end range of the chart. A
     }
     }
 
-{% endhighlight %}
-
-{% endtabs %}
 
 ## Output
 
 ![LazyLoading_Output](https://github.com/SyncfusionExamples/How-to-perform-lazy-loading-in-WPF-Chart-SfChart/assets/113961867/8adee59a-dee8-43dc-8609-c4d529e80873)
 
+## Troubleshooting
 
+If you are facing a path too long exception when building this example project, close Visual Studio and rename the repository to short and build the project.
