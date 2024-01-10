@@ -29,7 +29,7 @@
                                    YBindingPath="YValue"   
                                    Stroke="#ff933d"
                                    Interior="#FFF1D8"
-                                   EnableAnimation="True"
+                                   EnableAnimation="True" Margin="-183,-4,182,4"
                                    ></syncfusion:SplineAreaSeries>
             <syncfusion:SfChart.Behaviors>
                 <syncfusion:ChartZoomPanBehavior EnablePanning="True" EnableDirectionalZooming="False" EnableMouseWheelZooming="False" EnablePinchZooming="False" EnableSelectionZooming="False"></syncfusion:ChartZoomPanBehavior>

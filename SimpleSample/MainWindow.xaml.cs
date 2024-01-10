@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media;
 
-
 namespace SimpleSample
 {
     /// <summary>
@@ -29,8 +28,7 @@ namespace SimpleSample
         }
        
         private async void chart_PanChanged(object sender, PanChangedEventArgs e)
-        {
-           
+        {           
             var position = xAxis.ZoomPosition - xAxis.ZoomFactor;
             
             if (e.Axis.Equals(xAxis) &&  position>=0)
