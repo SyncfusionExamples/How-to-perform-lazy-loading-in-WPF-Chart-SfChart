@@ -1,4 +1,4 @@
-# How to perform lazy loading in WPF Chart SfChart
+# How to perform lazy loading in WPF SfChart
 This sample demonstrates how to perform lazy loading in WPF Chart(SfChart).
 
 Here's a step-by-step guide on how to perform lazy loading in a WPF Chart using the Syncfusion SfChart
