@@ -1,10 +1,11 @@
-# How-to-perform-lazy-loading-in-WPF-Chart-SfChart-
+# How to perform lazy loading in WPF SfChart
 This sample demonstrates how to perform lazy loading in WPF Chart(SfChart).
 
 Here's a step-by-step guide on how to perform lazy loading in a WPF Chart using the Syncfusion SfChart
 
 ## Step 1: 
 Initialize the SfChart with Primary and Secondary axis.
+
 ## Step 2: 
 Hook the PanChanged event in SfChart and set the required ZoomFactor on the primary axis.
 
@@ -35,10 +36,6 @@ XAML
     chart.SecondaryAxis = yAxis;
     this.Content = chart;
 
-
-
-
-
 ## Step 3 : 
 Initialize the ChartZoomPanBehavior and enable panning by setting EnablePanning to “True”.
 
@@ -57,7 +54,7 @@ Initialize the ChartZoomPanBehavior and enable panning by setting EnablePanning 
 ## Step 4: 
 Implement the chart_PanChanged method to calculate the end range of the chart. As horizontal scrolling or panning reaches the end of the chart, additional data points are added, then adjust the position of the xAxis range using ZoomPosition.
 
- ### C#
+### C#
 
     **// startValue = You can set the last value of the data source in viewModel.**
     private void chart_PanChanged(object sender, PanChangedEventArgs e)
@@ -82,5 +79,7 @@ Implement the chart_PanChanged method to calculate the end range of the chart. A
 ![LazyLoading_Output](https://github.com/SyncfusionExamples/How-to-perform-lazy-loading-in-WPF-Chart-SfChart/assets/113961867/8adee59a-dee8-43dc-8609-c4d529e80873)
 
 ## Troubleshooting
-
+### Path too long exception
 If you are facing a path too long exception when building this example project, close Visual Studio and rename the repository to short and build the project.
+
+For more details, refer to the KB on [how to perform lazy loading in WPF Chart SfChart](https://support.syncfusion.com/kb/article/14567/how-to-perform-lazy-loading-in-wpf-chart-sfchart).
